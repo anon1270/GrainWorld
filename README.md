@@ -137,6 +137,20 @@ The checkpoint name encodes the memory configuration: `g448` = global bank size 
 
 ---
 
+## Results
+
+Camera-only 4D occupancy forecasting on Occ3D-nuScenes (%). Semantic mIoU and geometric IoU are
+reported at 1 s, 2 s and 3 s horizons; `Avg.` is the mean over the three horizons.
+
+| Method | mIoU 1s | mIoU 2s | mIoU 3s | mIoU Avg. | IoU 1s | IoU 2s | IoU 3s | IoU Avg. |
+|---|---|---|---|---|---|---|---|---|
+| **GrainWorld** | 29.25 | 26.70 | 24.47 | **26.81** | 51.83 | 50.25 | 48.30 | **50.13** |
+
+Numbers are produced by the evaluation command above with `grainworld_g448_l192.pth`.
+A full comparison against prior camera-only forecasting methods is reported in the paper.
+
+---
+
 ## Citation
 
 ```bibtex
