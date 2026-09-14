@@ -1,0 +1,56 @@
+# GrainWorld runtime dependencies for the supported Python 3.10 / CUDA 12.8
+# environment.  PyTorch, compiled OpenMMLab packages, and dataset SDKs with
+# GUI-OpenCV metadata are intentionally installed in a controlled order by
+# scripts/install_dependencies.sh.
+
+# Build/runtime foundations
+setuptools==78.1.0
+wheel==0.43.0
+packaging==24.1
+ninja==1.11.1.1
+cmake==3.30.5
+psutil==6.0.0
+Cython==3.0.10
+
+# Numerical and image stack pinned to the inherited legacy OpenMMLab recipe.
+numpy==1.23.5
+scipy==1.10.1
+numba==0.57.1
+llvmlite==0.40.1
+opencv-python-headless==4.8.0.76
+Pillow==10.0.1
+PyYAML==6.0.1
+
+# OpenMMLab runtime utilities.  The mmdet/mmseg/mmcls packages are installed
+# with --no-deps after the patched MMCV build by install_dependencies.sh.
+addict==2.4.0
+yapf==0.40.2
+terminaltables==3.1.10
+prettytable==3.8.0
+mmengine==0.10.3
+
+# Dataset and evaluation stack
+tqdm==4.66.5
+pyquaternion==0.9.9
+Shapely==1.8.5.post1
+pycocotools==2.0.7
+scikit-learn==1.3.0
+scikit-image==0.21.0
+networkx==3.1
+pandas==2.0.3
+matplotlib==3.5.2
+trimesh==3.23.5
+cachetools==5.5.0
+descartes==1.1.0
+
+# Model and logging utilities
+tensorboard==2.14.0
+protobuf==4.24.0
+einops==0.8.1
+timm==0.9.5
+termcolor==2.3.0
+requests==2.32.3
+six==1.16.0
+
+# Repository checks
+pytest==7.4.0
